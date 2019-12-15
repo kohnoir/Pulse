@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Puls</string>
+    <string name="name">Комплексная система мониторинга здоровья</string>
+    <string name="strokaFIO">Введите ФИО</string>
+    <string name="old">Введите возраст</string>
+    <string name="btn">Сохранить</string>
+    <string name="strokaDavVerh">Введите верхнее давление</string>
+    <string name="strokaDavNiz">Введите нижнее давление</string>
+    <string name="strokaPuls">Введите пульс</string>
+    <string name="strokaData">Введите дату</string>
+    <string name="strokaTime">Введите время</string>
+    <string name="strokaTah">Есть ли у вас такихардия ?</string>
+    <string name="strokaVes">Введите свой вес</string>
+    <string name="strokaStep">Введите количество шагов</string>
+    <string name="btnNaz">Назад</string>
+    <string name="btnLife">Жизненные показатели</string>
+    <string name="btnPress">Показатели давления</string>
+</resources>
