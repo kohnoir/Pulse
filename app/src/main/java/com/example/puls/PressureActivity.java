@@ -3,6 +3,7 @@ package com.example.puls;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.util.Log;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PressureActivity extends AppCompatActivity {
-
+    private static final String TAG="MyApp";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,7 @@ public class PressureActivity extends AppCompatActivity {
 
     }
     private void SavePress(){
+        Log.i(TAG,"Это мое сообщение для записи в журнале");
         Button btnRrs = (Button) findViewById(R.id.button);
         btnRrs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +53,7 @@ public class PressureActivity extends AppCompatActivity {
                     PRESSURE.put(time, pressure);
                 }
                 catch (NumberFormatException e){
+                    Log.e(TAG,"Получено исключение");
                     Toast toast = Toast.makeText(getApplicationContext(),
                             "Введите правильные данные", Toast.LENGTH_SHORT);
                     toast.show();

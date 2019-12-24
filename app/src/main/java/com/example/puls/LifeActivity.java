@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ import java.util.Map;
 
 public class LifeActivity extends AppCompatActivity {
     long time = System.currentTimeMillis();//Local time не доступно просто кайф
+    private static final String TAG="MyApp";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,7 @@ public class LifeActivity extends AppCompatActivity {
     }
     private void BtnSave(){
         Button btnSave =  (Button) findViewById(R.id.btn3);
+        Log.i(TAG,"Это мое сообщение для записи в журнале");
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +40,7 @@ public class LifeActivity extends AppCompatActivity {
                     LifeActivity.put(time, life);
                 }
                 catch (NumberFormatException e){
+                    Log.e(TAG,"Получено исключение");
                     Toast toast = Toast.makeText(getApplicationContext(),
                             "Введите правильные данные", Toast.LENGTH_SHORT);
                     toast.show();
