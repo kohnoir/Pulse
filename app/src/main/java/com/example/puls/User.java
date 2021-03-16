@@ -1,20 +1,20 @@
 package com.example.puls;
 
 public class User {
-    String FIO;
+    String LineName;
     int Old;
 
-    public User(String FIO, int old) {
-        this.FIO = FIO;
+    public User(String LineName, int old) {
+        this.LineName = LineName;
         Old = old;
     }
 
-    public String getFIO() {
-        return FIO;
+    public String getLineName() {
+        return LineName;
     }
 
-    public void setFIO(String FIO) {
-        this.FIO = FIO;
+    public void setLineName(String LineName) {
+        this.LineName = LineName;
     }
 
     public int getOld() {

@@ -1,20 +1,20 @@
 package com.example.puls;
 
 public class Life {
-    double Ves;
+    double Weight;
     int Step;
 
-    public Life(double ves, int step) {
-        Ves = ves;
+    public Life(double weight, int step) {
+        Weight = weight;
         Step = step;
     }
 
-    public double getVes() {
-        return Ves;
+    public double getWeight() {
+        return Weight;
     }
 
-    public void setVes(double ves) {
-        Ves = ves;
+    public void setWeight(double weight) {
+        Weight = weight;
     }
 
     public int getStep() {

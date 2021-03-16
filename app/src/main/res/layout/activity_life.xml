@@ -7,7 +7,7 @@
     tools:context=".LifeActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linear_layout_two"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -15,30 +15,30 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="50dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintBottom_toTopOf="@+id/linear_layout_three"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editStep"
+            android:id="@+id/edit_step"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:ems="10"
-            android:hint="@string/strokaStep"
+            android:hint="@string/line_step"
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editMuss"
+            android:id="@+id/edit_m"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:ems="10"
-            android:hint="@string/strokaVes"
+            android:hint="@string/line_m"
             android:inputType="numberDecimal" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linear_layout_three"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="321dp"
@@ -46,10 +46,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_two">
 
         <Button
-            android:id="@+id/btn3"
+            android:id="@+id/btn_three"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/btn" />

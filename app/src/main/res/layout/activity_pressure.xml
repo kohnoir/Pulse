@@ -7,7 +7,7 @@
     tools:context=".PressureActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linear_layout"
         android:layout_width="0dp"
         android:layout_height="406dp"
         android:layout_marginStart="1dp"
@@ -19,54 +19,53 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/verhDav"
+            android:id="@+id/high_press"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autoText="false"
             android:ems="10"
-            android:hint="@string/strokaDavVerh"
+            android:hint="@string/line_high_press"
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/nizDav"
+            android:id="@+id/low_press"
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:ems="10"
-            android:hint="@string/strokaDavNiz"
+            android:hint="@string/line_low_press"
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editPulse"
+            android:id="@+id/edit_pulse"
             android:layout_width="match_parent"
             android:layout_height="41dp"
             android:ems="10"
-            android:hint="@string/strokaPuls"
+            android:hint="@string/line_pulse"
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editDate"
+            android:id="@+id/edit_date"
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:ems="10"
-            android:hint="@string/strokaData"
+            android:hint="@string/line_data"
             android:inputType="date" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/edit_text_six"
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:ems="10"
-            android:hint="@string/strokaTime"
+            android:hint="@string/line_time"
             android:inputType="time" />
 
         <TextView
-            android:id="@+id/textTah"
+            android:id="@+id/text_tah"
             android:layout_width="133dp"
             android:layout_height="40dp"
-            android:text="@string/strokaTah" />
+            android:text="@string/line_tah" />
 
         <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/check_box_three"
             android:layout_width="46dp"
             android:layout_height="42dp" />
 

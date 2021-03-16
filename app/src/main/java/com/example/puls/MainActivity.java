@@ -12,81 +12,76 @@ import android.widget.Toast;
 
 import java.time.LocalTime;
 import java.util.Map;
-
-
-
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG="MyApp";
-
+    private Button btnPress;
+    private Button btnSave;
+    private EditText lineName;
+    private EditText old;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+        init();
         SaveName();
         SwitchLife();
         SwitchPress();
     }
+    private void init(){
+        btnPress = findViewById(R.id.btn_pressure);
+        btnSave = findViewById(R.id.btn_save);
+        lineName = findViewById(R.id.line_name);
+        old = findViewById(R.id.line_old);
+    }
     private void SaveName(){
-        Button btnSave = (Button) findViewById(R.id.btnSave);
-        Log.i(TAG,"Это мое сообщение для записи в журнале");
+        Log.i(TAG,String.valueOf(R.string.log));
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    EditText fIO = findViewById(R.id.strokaFIO);
-                    EditText old = findViewById(R.id.strokaOld);
-                    String FIO = fIO.getText().toString();
+
+                    String LineName = lineName.getText().toString();
                     String StringOld = old.getText().toString();
                     int intOld = Integer.parseInt(StringOld);
-                    User user = new User(FIO, intOld);
+                    User user = new User(LineName, intOld);
 
                 }
                 catch (NumberFormatException e){
-                    Log.e(TAG,"Получено исключение");
+                    Log.e(TAG,String.valueOf(R.string.log_exception));
                     Toast toast = Toast.makeText(getApplicationContext(),
-                            "Введите правильные данные", Toast.LENGTH_SHORT);
+                            String.valueOf(R.string.correct_info), Toast.LENGTH_SHORT);
                     toast.show();
                 }
                 finally {
-                    EditText fIO = findViewById(R.id.strokaFIO);
-                    String FIO = fIO.getText().toString();
+                    EditText lineName = findViewById(R.id.line_name);
+                    String LineName = lineName.getText().toString();
                     Toast toast = Toast.makeText(getApplicationContext(),
-                            "Добро пожаловать, " + FIO, Toast.LENGTH_SHORT);
+                            R.string.hello + LineName, Toast.LENGTH_SHORT);
                     toast.show();
                 }
             }
         });
     }
     private void SwitchLife(){
-        Button btnLife = (Button) findViewById(R.id.btnLife);
+        Button btnLife = findViewById(R.id.btn_life);
         btnLife.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (v.getId()){
-                    case R.id.btnLife:
-                        Intent intent = new Intent(MainActivity.this, LifeActivity.class);
-                        startActivity(intent);
-                        break;
-                    default:
-                        break;
+                if (v.getId() == R.id.btn_life) {
+                    Intent intent = new Intent(MainActivity.this, LifeActivity.class);
+                    startActivity(intent);
                 }
             }
         });
     }
     private void SwitchPress(){
-        Button btnPress = (Button) findViewById(R.id.btnPressure);
         btnPress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.btnPressure:
-                        Intent intent = new Intent(MainActivity.this, PressureActivity.class);
-                        startActivity(intent);
-                        break;
-                    default:
-                        break;
+                if (v.getId() == R.id.btn_pressure) {
+                    Intent intent = new Intent(MainActivity.this, PressureActivity.class);
+                    startActivity(intent);
                 }
             }
         });

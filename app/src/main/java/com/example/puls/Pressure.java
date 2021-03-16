@@ -2,8 +2,8 @@ package com.example.puls;
 
 public class Pressure {
     String editPulse;
-    String verhDav;
-    String nizDav;
+    String highPress;
+    String lowPress;
     String tah;
 
     public String getEditPulse() {
@@ -14,20 +14,20 @@ public class Pressure {
         this.editPulse = editPulse;
     }
 
-    public String getVerhDav() {
-        return verhDav;
+    public String gethighPress() {
+        return highPress;
     }
 
-    public void setVerhDav(String verhDav) {
-        this.verhDav = verhDav;
+    public void setHighPress(String highPress) {
+        this.highPress = highPress;
     }
 
-    public String getNizDav() {
-        return nizDav;
+    public String getLowPress() {
+        return lowPress;
     }
 
-    public void setNizDav(String nizDav) {
-        this.nizDav = nizDav;
+    public void setLowPress(String lowPress) {
+        this.lowPress = lowPress;
     }
 
     public String getTah() {
@@ -38,10 +38,10 @@ public class Pressure {
         this.tah = tah;
     }
 
-    public Pressure(String editPulse, String verhDav, String nizDav, String tah) {
+    public Pressure(String editPulse, String highPress, String lowPress, String tah) {
         this.editPulse = editPulse;
-        this.verhDav = verhDav;
-        this.nizDav = nizDav;
+        this.highPress = highPress;
+        this.lowPress = lowPress;
         this.tah = tah;
     }
 }
